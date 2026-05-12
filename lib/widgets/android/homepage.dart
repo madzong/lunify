@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lunify/widgets/android/bottom_nav.dart';
 import 'package:lunify/widgets/android/homepage/most_listened.dart';
 import 'package:lunify/widgets/android/homepage/recents.dart';
-import 'package:lunify/widgets/android/mini_player.dart';
+// import 'package:lunify/widgets/android/mini_player.dart';
 
 import 'drawer.dart';
 import 'bar.dart';
@@ -46,14 +46,14 @@ class _AndroidHomePageState extends State<AndroidHomePage> {
               ],
             ),
           ),
-          Align(
-            alignment: .bottomCenter,
-            child: AndroidMiniPlayer(
-              margin: .all(8.0),
-              title: 'Fistaszki',
-              songLength: Duration(minutes: 2, seconds: 51),
-            ),
-          )
+          // Align(
+          //   alignment: .bottomCenter,
+          //   child: AndroidMiniPlayer(
+          //     margin: .all(8.0),
+          //     title: 'Fistaszki',
+          //     songLength: Duration(minutes: 2, seconds: 51),
+          //   ),
+          // )
         ],
       ),
       bottomNavigationBar: AndroidBottomNav(),
