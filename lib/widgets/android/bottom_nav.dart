@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AndroidBottomNav extends StatelessWidget {
   const AndroidBottomNav({super.key});
@@ -11,7 +12,9 @@ class AndroidBottomNav extends StatelessWidget {
         children: [
           Expanded(
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.go('/');
+              },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder()
               ),
@@ -20,7 +23,9 @@ class AndroidBottomNav extends StatelessWidget {
           ),
           Expanded(
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.go('/add');
+              },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder()
               ),
