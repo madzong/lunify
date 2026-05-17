@@ -1,10 +1,25 @@
+import 'package:ffmpeg_kit_extended_flutter/ffmpeg_kit_extended_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lunify/database.dart';
+import 'package:lunify/download_manager.dart';
+import 'package:lunify/song_manager.dart';
 import 'package:lunify/widgets/add_songs.dart';
 import 'package:lunify/widgets/homepage.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(MainApp());
+void main() async {
+  await FFmpegKitExtended.initialize();
+
+  runApp(
+    MultiProvider(
+      providers: [
+        Provider<AppDatabase>(create: (_) => AppDatabase()),
+        Provider<DownloadManager>(create: (_) => DownloadManager()),
+        Provider<SongManager>(create: (context) => SongManager(context)),
+      ],
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {

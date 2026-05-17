@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AndroidAppBar extends StatelessWidget implements PreferredSizeWidget {
-  AndroidAppBar({super.key});
+  AndroidAppBar({super.key, this.topText = 'Lunify'});
+
+  final String topText;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class AndroidAppBar extends StatelessWidget implements PreferredSizeWidget {
           );
         }
       ),
-      title: Text('Lunify'),
+      title: Text(topText),
       actions: [
         IconButton(
           icon: CircleAvatar(

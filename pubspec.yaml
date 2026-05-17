@@ -10,14 +10,30 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^17.2.3
+  drift: ^2.33.0
+  drift_flutter: ^0.3.0
+  path_provider: ^2.1.5
+  provider: ^6.1.5+1
+  youtube_explode_dart: ^3.1.0
+  http: ^1.6.0
+  file_picker: ^11.0.2
+  path: ^1.9.1
+  ffmpeg_kit_extended_flutter: ^0.5.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
   flutter_launcher_icons: ^0.14.4
+  drift_dev: ^2.33.0
+  build_runner: ^2.15.0
 
 flutter:
   uses-material-design: true
   assets:
     - assets/icon/
+
+ffmpeg_kit_extended_config:
+  type: "base"
+  gpl: true
+  small: true
